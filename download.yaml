@@ -19,77 +19,10 @@
 #
 ---
 
-#
-# Drug Central
-#
--
-  # drug - target interactions from Drug Central
-  url: http://unmtid-shinyapps.net/download/drug.target.interaction.tsv.gz
-  local_name: drug.target.interaction.tsv.gz
-s
-# #
-# # Most of the data is extracted from the 'bacteria-archaea-traits' github repository
-# # link: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/tree/master/output
-# #
-# # ******Output Data*******
-# Condensed-species
-# - GTDB
-#   link: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_species_GTDB.csv
--
-  #url: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_species_GTDB.csv?raw=true
-  #local_name: condensed_species_GTDB.csv
-# - NCBI
-#   link: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_species_NCBI.csv
--
-  #url: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_species_NCBI.csv?raw=true
-  #local_name: condensed_species_NCBI.csv
+# NMDC biosample table as prepared for NER tests by Bill Duncan
 
-# Condensed-traits
-# - GTDB
-#   link: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_traits_GTDB.csv
 -
-  #url: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_traits_GTDB.csv?raw=true
-  #local_name: condensed_traits_GTDB.csv
-# - NCBI
-#   link: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/tree/master/output
--
-  url: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_traits_NCBI.csv?raw=true
-  local_name: condensed_traits_NCBI.csv
+  # nmdc-biosample-table-for-ner-20201016.tsv
+  url: https://raw.githubusercontent.com/INCATools/biosample-analysis/master/downloads/nmdc-gold-path-ner/nmdc-biosample-table-for-ner-20201016.tsv
+  local_name: nmdc-biosample-table-for-ner-20201016.tsv
 
-#
-# #**** ROBOT ****
-#
--
-  url: https://github.com/ontodev/robot/releases/download/v1.7.2/robot.jar
-  local_name: robot.jar
--
-  url: https://raw.githubusercontent.com/ontodev/robot/master/bin/robot 
-  local_name: robot
-
-# # ****Conversion Tables****
-#
-# Environment
-#
--
-  url: https://raw.githubusercontent.com/bacteria-archaea-traits/bacteria-archaea-traits/master/data/conversion_tables/environments.csv
-  local_name: environments.csv
-
-# #**** Ontology files****
-#
-# ENVO
-#
--
-  url: http://purl.obolibrary.org/obo/envo.json
-  local_name: envo.json
-#
-# CHEBI
-#
-#-
-#  url: http://purl.obolibrary.org/obo/chebi.owl
-#  local_name: chebi.owl
-#
-# NCBI Taxon
-#
-#-
-#  url: http://purl.obolibrary.org/obo/ncbitaxon.owl
-#  local_name: ncbitaxon.owl
