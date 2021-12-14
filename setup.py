@@ -7,7 +7,7 @@ from setuptools import find_packages, setup
 here = os.path.abspath(os.path.dirname(__file__))
 
 # get the long description from the relevant file
-with copen(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
+with copen(os.path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 
@@ -24,7 +24,7 @@ def find_version(*file_paths):
     raise RuntimeError('Unable to find version string.')
 
 
-__version__ = find_version('project_name', '__version__.py')
+__version__ = find_version('biosample_graph', '__version__.py')
 
 test_deps = [
     'pytest',
@@ -40,13 +40,13 @@ extras = {
 }
 
 setup(
-    name='project_name',
+    name='biosample_graph',
     version=__version__,
-    description='KG hub for project_name',
+    description='',
     long_description=long_description,
-    url='https://github.com/Knowledge-Graph-Hub/project_name',
-    author='Harshad Hegde',
-    author_email='hhegde@lbl.gov',
+    url='https://github.com/caufieldjh/biosample-graph',
+    author='',
+    author_email='',
     python_requires='>=3.7',
 
     # choose your license
@@ -66,34 +66,10 @@ setup(
         'compress_json',
         'click',
         'pyyaml',
-        'kgx',
-        'sphinx',
-        'sphinx_rtd_theme',
-        'recommonmark',
-        'parameterized',
-        'validate_version_code',
-        'pandas',
-        'networkx',
-        # Extra packages added
-        'six', # needed by rdflib
-        'ordered-set', #needed by kgx
-        'requests', # needed by kgx
-        'ShExJSG', # needed by linkml-runtime
-        'jsonasobj==1.2.1', #deprecated # needed by kgx
-        'prefixcommons', # needed by kgx
-        'packaging', #needed by deprecation
-        'cachetools', # needed by kgx
-        'jsonlines', # needed by kgx
-        'neo4jrestclient', # needed by kgx
-        'validators', # needed by kgx
-        'stringcase', # needed by kgx
-        'linkml_model', # needed by kgx
-        'isodate', # needed by rdflib
-        'deprecated', # needed by linkml-runtime
-        'hbreader', # needed by jsonasobj
-        'bmt', # needed by kgx
-        'jsonstreams', # needed by kgx
-        'ijson', # needed by kgx
+        'kgx==1.5.0',
+        'koza==0.1.5',
+        'biolink_model_pydantic==0.1.4',
+        'requests',
     ],
     extras_require=extras,
 )

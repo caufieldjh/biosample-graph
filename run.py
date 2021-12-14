@@ -3,12 +3,11 @@
 import os
 
 import click
-from project_name import download as kg_download
-from project_name import transform as kg_transform
-#from project_name.make_holdouts import make_holdouts
-from project_name.merge_utils.merge_kg import load_and_merge
-from project_name.query import run_query, parse_query_yaml, result_dict_to_tsv
-from project_name.transform import DATA_SOURCES
+from biosample_graph import download as kg_download
+from biosample_graph import transform as kg_transform
+from biosample_graph.merge_utils.merge_kg import load_and_merge
+from biosample_graph.query import run_query, parse_query_yaml, result_dict_to_tsv
+from biosample_graph.transform import DATA_SOURCES
 
 
 @click.group()
