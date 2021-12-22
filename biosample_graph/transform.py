@@ -4,17 +4,18 @@ import logging
 from typing import List
 
 from biosample_graph.transform_utils.ontology import OntologyTransform
+from biosample_graph.transform_utils.biosample import BiosampleTransform
 from biosample_graph.transform_utils.ontology.ontology_transform import ONTOLOGIES
 
 DATA_SOURCES = {
-    'EnvoTransform' : OntologyTransform,
+    'ENVOTransform' : OntologyTransform,
+    'NMDCBiosampleTransform': BiosampleTransform
 }
 
 
 def transform(input_dir: str, output_dir: str, sources: List[str] = None) -> None:
     """Call scripts in project_name/transform/[source name]/ to transform each source into a graph format that
-    KGX can ingest directly, in either TSV or JSON format:
-    https://github.com/NCATS-Tangerine/kgx/blob/master/data-preparation.md
+    KGX can ingest directly, in either TSV or JSON format.
 
     Args:
         input_dir: A string pointing to the directory to import data from.

@@ -1,24 +1,20 @@
 import os
 
 from typing import Optional
-
+from kgx.cli.cli_utils import transform  # type: ignore
 from biosample_graph.transform_utils.transform import Transform
-#from kgx import PandasTransformer, ObographJsonTransformer  # type: ignore
-from kgx.cli.cli_utils import transform
-
 
 ONTOLOGIES = {
-    #'HpTransform': 'hp.json',
-    #'GoTransform': 'go-plus.json',
-    'NCBITransform':  'ncbitaxon.json',
-    'ChebiTransform': 'chebi.json',
-    'EnvoTransform': 'envo.json'
+    'ENVOTransform': 'envo_kgx_tsv.tar.gz',
 }
 
 
 class OntologyTransform(Transform):
     """
-    OntologyTransform parses an Obograph JSON form of an Ontology into nodes nad edges.
+    OntologyTransform acts as a passthrough for OBO ontologies - 
+    those retrieved as tsv node and edge lists in .tar.gz can be
+    parsed directly by KGX. 
+    We have KGX decompress the file.
     """
     def __init__(self, input_dir: str = None, output_dir: str = None):
         source_name = "ontologies"
@@ -28,7 +24,7 @@ class OntologyTransform(Transform):
         """Method is called and performs needed transformations to process
         an ontology.
         Args:
-            data_file: data file to parse
+            data_file: data file (.tar.gz) to parse
         Returns:
             None.
         """
@@ -52,5 +48,9 @@ class OntologyTransform(Transform):
              None.
         """
         print(f"Parsing {data_file}")
-        
-        transform(inputs=[data_file], input_format='obojson', output= os.path.join(self.output_dir, name), output_format='tsv')
+
+        transform(inputs=[data_file],
+                  input_format='tsv',
+                  input_compression='tar.gz',
+                  output=os.path.join(self.output_dir, name),
+                  output_format='tsv')

@@ -1,0 +1,10 @@
+name: 'biosample'
+
+dataset_description:
+  ingest_title: 'biosample'
+  ingest_url: 'https://raw.githubusercontent.com/INCATools/biosample-analysis/master/downloads/nmdc-gold-path-ner/nmdc-biosample-table-for-ner-20201016.tsv'
+  description: 'Test NMDC Biosample data'
+  rights: ''
+
+source_files:
+  - 'biosample_nmdc_test.yaml'

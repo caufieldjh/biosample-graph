@@ -1,0 +1,50 @@
+name: 'biosample_nmdc_test'
+
+format: 'csv'
+
+delimiter: '\t'
+
+files:
+  - './data/raw/nmdc-biosample-table-for-ner-20201016.tsv'
+
+metadata: './biosample_graph/transform_utils/hpa/metadata.yaml'
+
+header: 'infer'
+
+columns:
+  - 'GOLD_ID'
+  - 'BIOSAMPLE_NAME'
+  - 'DESCRIPTION'
+  - 'HABITAT'
+  - 'IDENTIFIER'
+  - 'SAMPLE_COLLECTION_SITE'
+  - 'ECOSYSTEM'
+  - 'ECOSYSTEM_CATEGORY'
+  - 'ECOSYSTEM_TYPE'
+  - 'ECOSYSTEM_SUBTYPE'
+  - 'SPECIFIC_ECOSYSTEM'
+  - 'BROAD_SCALE_LABEL'
+  - 'LOCAL_SCALE_LABEL'
+  - 'MEDIUM_LABEL'
+  - 'ENV_BROAD_SCALE'
+  - 'ENV_LOCAL_SCALE'
+  - 'ENV_MEDIUM'
+
+node_properties:
+  - 'id'
+  - 'category'
+  - 'source'
+  - 'xref'
+  - 'description'
+
+edge_properties:
+  - 'id'
+  - 'subject'
+  - 'predicate'
+  - 'object'
+  - 'category'
+  - 'relation'
+  - 'source'
+  - 'provided_by'
+
+transform_mode: 'flat'
