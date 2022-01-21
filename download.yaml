@@ -26,6 +26,10 @@
   url: https://raw.githubusercontent.com/INCATools/biosample-analysis/master/downloads/nmdc-gold-path-ner/nmdc-biosample-table-for-ner-20201016.tsv
   local_name: nmdc-biosample-table-for-ner-20201016.tsv
 -
+  # All GOLD data
+  url: https://gold.jgi.doe.gov/download?mode=site_excel
+  local_name: goldData.xlsx
+-
   # ENVO ontology from KG-OBO
   url: https://kg-hub.berkeleybop.io/kg-obo/envo/2021-05-14/envo_kgx_tsv.tar.gz
   local_name: envo_kgx_tsv.tar.gz
